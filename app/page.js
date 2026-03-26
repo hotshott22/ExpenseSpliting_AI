@@ -1,7 +1,9 @@
+import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 export default function Home() {
   return (
-    <div>Hellow World!</div>
+    <><div>Hellow World!</div>
+      <Button variant={"destructive"}>Heyyy</Button></>
   )
 }
