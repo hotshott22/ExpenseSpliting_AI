@@ -1,15 +1,10 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import { ConvexClientProvider } from "@/components/convex-client-provider";
+import { ClerkProvider } from "@clerk/nextjs";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "SplitExpense",
@@ -19,11 +14,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <head>
+        <link rel="icon" herf="/logos/logo3.png" sizes="any " />
+      </head>
+      <body className={`${inter.className}`}>
+        <ClerkProvider
+          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+        >
+          <ConvexClientProvider>
+            <Header />
+
+            <main className="min-h-screen">
+              {children}
+            </main>
+          </ConvexClientProvider>
+        </ClerkProvider>
       </body>
-    </html>
+    </html >
   );
 }
