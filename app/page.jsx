@@ -160,7 +160,7 @@ export default function LandingPage() {
       {/* ───── Call‑to‑Action ───── */}
       <section className="py-20 gradient">
         <div className="container mx-auto px-4 md:px-6 text-center space-y-6">
-          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl text-white">
+          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl text-Green">
             Ready to simplify expense sharing?
           </h2>
           <p className="mx-auto max-w-[600px] text-green-800 md:text-xl/relaxed">
