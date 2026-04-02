@@ -1,0 +1,90 @@
+# ============================================
+# Splitter - All Required Packages
+# ============================================
+# Run install.sh to auto-install everything
+# OR manually run each line below
+# Always use --legacy-peer-deps flag (React 19)
+# ============================================
+
+
+# ---------- DATABASE ----------
+convex
+@convex-dev/react-clerk
+
+
+# ---------- AUTHENTICATION ----------
+@clerk/nextjs
+
+
+# ---------- UI COMPONENTS (Shadcn) ----------
+# Run these via npx shadcn@latest add <name>
+# avatar
+# badge
+# button
+# calendar
+# card
+# command
+# dialog
+# input
+# label
+# popover
+# radio-group
+# select
+# slider
+# sonner
+# tabs
+# textarea
+
+
+# ---------- FORMS & VALIDATION ----------
+react-hook-form
+zod
+@hookform/resolvers
+
+
+# ---------- BACKGROUND JOBS ----------
+inngest
+
+
+# ---------- EMAIL ----------
+resend
+
+
+# ---------- AI ----------
+@google/generative-ai
+
+
+# ---------- CHARTS ----------
+recharts
+
+
+# ---------- UTILITIES ----------
+react-spinners
+date-fns
+lucide-react          # comes pre-installed with shadcn
+
+
+# ============================================
+# HOW TO INSTALL MANUALLY
+# ============================================
+
+# Step 1 - Core packages
+# npm install convex @clerk/nextjs @convex-dev/react-clerk --legacy-peer-deps
+
+# Step 2 - Shadcn init
+# npx shadcn@latest init --defaults --legacy-peer-deps
+
+# Step 3 - Shadcn components
+# npx shadcn@latest add avatar badge button calendar card command dialog input label popover radio-group select slider sonner tabs textarea --legacy-peer-deps
+
+# Step 4 - Forms
+# npm install react-hook-form zod @hookform/resolvers --legacy-peer-deps
+
+# Step 5 - Background jobs & email
+# npm install inngest resend --legacy-peer-deps
+
+# Step 6 - AI
+# npm install @google/generative-ai --legacy-peer-deps
+
+# Step 7 - Charts & utilities
+# npm install recharts react-spinners date-fns --legacy-peer-deps
